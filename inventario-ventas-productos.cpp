@@ -34,6 +34,7 @@ int main(){
 	cout<<"listar los productos registrados (apretar 2)"<<endl;
 	cout<<"buscar producto (apretar 3)"<<endl;
 	cout<<"actualizar datos de un producto (apretar 4)"<<endl;
+	cout<<"eliminar un producto (apretar 5)"<<endl;
 	//ingresamos que desea hacer el ususario
 	cout<<"que deseas hacer? "<<endl;
 	cin>>hacer;
@@ -100,8 +101,35 @@ int main(){
 		}else{
 			cout<<"no se encontro el producto a cambiar! "<<endl;
 		}
+	}else if(hacer==5){
 		
-		
+		int eliminarProduct;
+		cout<<"los productos son: "<<endl;
+		//mostramos los productos
+		for(int i=0; i<cant; i++){
+			cout<<i+1<<"- "<<productos[i].nombre<<endl;
+		}
+		//preguntamos que producto desea eliminar
+		cout<<"que poducto deseas eliminar: elige su numero (1,2,3,...)"<<endl;
+		cin>>eliminarProduct;
+		//asignamos a una variable el  productoa eliminar
+		int elim=eliminarProduct;
+		//disminuimos es 1 el producto a eliminar
+		eliminarProduct--;
+		//mostramos el producto que elimino
+		cout<<"has eliminado el producto "<<elim<<endl;
+		cout<<productos[eliminarProduct].nombre;
+		//condicion para hacer el cambio
+		if(eliminarProduct>=0 and eliminarProduct<cant){
+			for(int i=eliminarProduct; i<cant-1; i++){
+				productos[i].nombre=productos[i+1].nombre;
+				productos[i].precio=productos[i+1].precio;
+			}
+		//reducimos la cantidad
+		cant--;
+		}else{
+			cout<<"no se encontro el producto que desea eliminar! "<<endl;
+		}
 	}
 	
 	
