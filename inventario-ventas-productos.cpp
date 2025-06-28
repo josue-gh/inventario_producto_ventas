@@ -35,6 +35,7 @@ int main(){
 	cout<<"buscar producto (apretar 3)"<<endl;
 	cout<<"actualizar datos de un producto (apretar 4)"<<endl;
 	cout<<"eliminar un producto (apretar 5)"<<endl;
+	cout<<"registrar una venta (apretar 6)"<<endl;
 	//ingresamos que desea hacer el ususario
 	cout<<"que deseas hacer? "<<endl;
 	cin>>hacer;
@@ -130,6 +131,31 @@ int main(){
 		}else{
 			cout<<"no se encontro el producto que desea eliminar! "<<endl;
 		}
+	}else if(hacer==6){
+		int u;
+		float sum=0;
+		int g;
+		cout<<"productos: "<<endl;
+		//bucle para mostrar los productos
+		for(int i=0; i<cant; i++){
+			cout<<i+1<<"- "<<productos[i].nombre<<endl;
+		}
+		cout<<"que productos deseas registrar su venta? (ingresa si indice 1,2,3,...)"<<endl;
+		cin>> u;
+		if(u>=1 and u<=cant){
+			ventas[u-1].producto =productos[u-1].nombre;
+			//ingresamos la cantidad de ventas
+			cout<<"ingresa la cantidad de ventas: "<<endl;
+			cin>> ventas[u-1].cantidad;
+			g=ventas[u-1].cantidad *productos[u-1].precio;
+			//agregamos las ventas
+		sum=sum +g;
+		//guardamos las ventas
+		ventas[u-1].precioTotal=sum;
+		}else{
+			cout<<"producto no encontrado! "<<endl;
+		}
+		 
 	}
 	
 	
