@@ -33,6 +33,7 @@ int main(){
 	cout<<"registrar un nuevo producto (apretar 1)"<<endl;
 	cout<<"listar los productos registrados (apretar 2)"<<endl;
 	cout<<"buscar producto (apretar 3)"<<endl;
+	cout<<"actualizar datos de un producto (apretar 4)"<<endl;
 	//ingresamos que desea hacer el ususario
 	cout<<"que deseas hacer? "<<endl;
 	cin>>hacer;
@@ -73,6 +74,34 @@ int main(){
 		if(k==0){
 			cout<<"no se encontro el producto ingresado !"<<endl;
 		}
+	}else if(hacer==4){
+		int nuevo;
+		string nuevoNom;
+		float nuevoPrec;
+		//ingresamos que producto desea cambiar
+		cout<<"productos: "<<endl;
+		for(int i=0; i<cant; i++){
+			//mostramos los nombres de los productos
+			cout<<i+1<<"- "<<productos[i].nombre<<endl;
+		}
+		cout<<"que producto deseas cambiar sus datos. ingresa su numero"<<endl;
+		cin>> nuevo;
+		//agregamos el cin.ignore
+		cin.ignore();
+		//condicion por si el numero ingresado no se encuentra
+		if(nuevo<=cant){
+			cout<<"ingrese el nuevo nombre: "<< endl;
+			getline(cin, nuevoNom);
+			cout<<"ingrese el nuevo precio: "<<endl;
+			cin>>nuevoPrec;
+			//cambiamos los datos
+			productos[nuevo-1].nombre=nuevoNom;
+			productos[nuevo-1].precio=nuevoPrec;
+		}else{
+			cout<<"no se encontro el producto a cambiar! "<<endl;
+		}
+		
+		
 	}
 	
 	
