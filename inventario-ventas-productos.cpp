@@ -36,6 +36,7 @@ int main(){
 	cout<<"actualizar datos de un producto (apretar 4)"<<endl;
 	cout<<"eliminar un producto (apretar 5)"<<endl;
 	cout<<"registrar una venta (apretar 6)"<<endl;
+	cout<<"listar ventas realizadas (apretar 7)"<<endl;
 	//ingresamos que desea hacer el ususario
 	cout<<"que deseas hacer? "<<endl;
 	cin>>hacer;
@@ -156,6 +157,14 @@ int main(){
 			cout<<"producto no encontrado! "<<endl;
 		}
 		 
+	}else if(hacer==7){
+		//bucle for Para listar las ventas 
+		for(int i=0; i<cant; i++){
+			cout<<"nombre: "<<ventas[i].producto<<endl;
+			cout<<"cantidad: "<<ventas[i].cantidad<<endl;
+			cout<<"precio total: "<< ventas[i].precioTotal<<endl;
+			cout<<endl;
+		}
 	}
 	
 	
