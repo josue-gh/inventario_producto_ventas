@@ -32,6 +32,7 @@ int main(){
 	cout<<endl;
 	cout<<"registrar un nuevo producto (apretar 1)"<<endl;
 	cout<<"listar los productos registrados (apretar 2)"<<endl;
+	cout<<"buscar producto (apretar 3)"<<endl;
 	//ingresamos que desea hacer el ususario
 	cout<<"que deseas hacer? "<<endl;
 	cin>>hacer;
@@ -52,6 +53,25 @@ int main(){
 		for(int i=0; i<cant; i++){
 		cout<<i+1 <<"- "<<productos[i].nombre<<endl;
 		cout<<i+1 <<"- "<<productos[i].precio<<endl;
+		}
+	}else if(hacer==3){
+		string nombre;
+		int k=0;
+		cout<<"ingrese el nombre del producto "<<endl;
+		cin>>nombre;
+		cout<<endl;
+		//realizamos un bucle para comparar todos los datos
+		for(int i=0; i<cant; i++){
+			//condicion para mostrar un registro
+			if(nombre==productos[i].nombre){
+				cout<<productos[i].nombre<<endl;
+				cout<<productos[i].precio<<endl;
+				//aumnetados el contador k
+				k++;
+			}
+		}
+		if(k==0){
+			cout<<"no se encontro el producto ingresado !"<<endl;
 		}
 	}
 	
