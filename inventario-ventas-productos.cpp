@@ -190,7 +190,7 @@ int main(){
 		cout<<"el total de ventas de todos los productos fue: "<<total<<endl;
 		cout<<"el monto total recolectado fue: "<<suma<<endl;
 	}
-	
+	cout<<endl;
 	
 	cout<<"deseas hacer algo mas (si o no) " <<endl;	
 	 
