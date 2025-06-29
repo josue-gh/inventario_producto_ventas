@@ -173,11 +173,13 @@ int main(){
 	}else if(hacer==7){
 		//bucle for Para listar las ventas 
 		for(int i=0; i<cant; i++){
+			cout<<"id de venta: "<<ventas[i].idVenta<<endl;
 			cout<<"nombre: "<<ventas[i].producto<<endl;
-			cout<<"cantidad: "<<ventas[i].cantidad<<endl;
-			cout<<"precio total: "<< ventas[i].precioTotal<<endl;
+			cout<<"cantidad de ventas: "<<ventas[i].cantidad<<endl;
+			cout<<"precio total por las ventas: "<< ventas[i].precioTotal<<endl;
 			cout<<endl;
 		}
+		cout<<endl;
 	}else if(hacer==8){
 		int suma=0, total=0;
 		//bucle para recorrer todas las ventas
