@@ -70,8 +70,9 @@ int main(){
 		for(int i=0; i<cant; i++){
 			//condicion para mostrar un registro
 			if(nombre==productos[i].nombre){
+				cout<<"producto "<<i+1<<endl;
 				cout<<productos[i].nombre<<endl;
-				cout<<productos[i].precio<<endl;
+				cout<<productos[i].precio<< " S/"<<endl;
 				//aumnetados el contador k
 				k++;
 			}
