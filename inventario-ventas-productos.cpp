@@ -155,6 +155,9 @@ int main(){
 		cin>> u;
 		if(u>=1 and u<=cant){
 			ventas[u-1].producto =productos[u-1].nombre;
+			//ingresamos el id
+			cout<<"ingresa el id del producto "<<endl;
+			cin>>ventas[u-1].idVenta;
 			//ingresamos la cantidad de ventas
 			cout<<"ingresa la cantidad de ventas: "<<endl;
 			cin>> ventas[u-1].cantidad;
@@ -166,7 +169,7 @@ int main(){
 		}else{
 			cout<<"producto no encontrado! "<<endl;
 		}
-		 
+		 cout<<endl;
 	}else if(hacer==7){
 		//bucle for Para listar las ventas 
 		for(int i=0; i<cant; i++){
