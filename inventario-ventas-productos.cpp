@@ -115,6 +115,8 @@ int main(){
 		for(int i=0; i<cant; i++){
 			cout<<i+1<<"- "<<productos[i].nombre<<endl;
 		}
+		if(cant>0){
+		
 		//preguntamos que producto desea eliminar
 		cout<<"que poducto deseas eliminar: elige su numero (1,2,3,...)"<<endl;
 		cin>>eliminarProduct;
@@ -136,6 +138,10 @@ int main(){
 		}else{
 			cout<<"no se encontro el producto que desea eliminar! "<<endl;
 		}
+	}else{
+		cout<<"no tiene agregado contactos! "<<endl;
+	}
+		cout<<endl;
 	}else if(hacer==6){
 		int u;
 		float sum=0;
