@@ -57,7 +57,8 @@ int main(){
 		//hacer un bucle que muestre todos los productos
 		for(int i=0; i<cant; i++){
 		cout<<i+1 <<"- "<<productos[i].nombre<<endl;
-		cout<<i+1 <<"- "<<productos[i].precio<<endl;
+		cout<<i+1 <<"- "<<productos[i].precio<<" S/"<<endl;
+		cout<<endl;
 		}
 	}else if(hacer==3){
 		string nombre;
