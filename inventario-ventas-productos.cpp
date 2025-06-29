@@ -50,7 +50,7 @@ int main(){
 		getline(cin, productos[cant].nombre);
 		cout<<"ingrese el precio del producto: "<<endl;
 		cin>>productos[cant].precio;
-		
+		cout<<endl;
 		cant++;
 	}else if(hacer==2){
 		cout<<"productos registrados: "<<endl;
