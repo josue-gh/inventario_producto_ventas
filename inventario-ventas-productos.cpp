@@ -106,6 +106,7 @@ int main(){
 		}else{
 			cout<<"no se encontro el producto a cambiar! "<<endl;
 		}
+		cout<<endl;
 	}else if(hacer==5){
 		
 		int eliminarProduct;
