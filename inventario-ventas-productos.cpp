@@ -196,7 +196,6 @@ int main(){
 	 
 	cin>> respuesta;
 	}while(respuesta =="si");
-	
-	
+	cout<<endl;
 	return 0;
 }
